@@ -1,9 +1,9 @@
-//connections
+//requires
 const { prompt } = require("inquirer");
 const db = require("./db");
 require("console.table");
 
-
+//initialize
 init();
 
 // initial function at NPM start
@@ -11,6 +11,7 @@ function init() {
     runPrompts();
 }
 
+//Begin questions
 function runPrompts() {
     prompt([
         {
@@ -134,16 +135,16 @@ function createRole() {
             prompt([
                 {
                     name: "title",
-                    message: "What is the name of the role?"
+                    message: "Enter the role: "
                 },
                 {
                     name: "salary",
-                    message: "What is the salary rate?"
+                    message: "Enter the salary: "
                 },
                 {
                     type: "list",
                     name: "department_id",
-                    message: "Which department does the role fall in under?",
+                    message: "Enter department for the role: ",
                     choices: departmentChoices
                 }
             ])
@@ -161,7 +162,7 @@ function createDepartment() {
     prompt([
         {
             name: "name",
-            message: "What is the name of the department?"
+            message: "Enter department Name: "
         }
     ])
         .then(res => {
@@ -177,11 +178,11 @@ function createEmployee() {
     prompt([
         {
             name: "first_name",
-            message: "What's the employee's first name?"
+            message: "Employee's first name: "
         },
         {
             name: "last_name",
-            message: "What's the employee's last name?"
+            message: "Employee's last name: "
         }
     ])
         .then(res => {
@@ -199,7 +200,7 @@ function createEmployee() {
                     prompt({
                         type: "list",
                         name: "roleId",
-                        message: "What's the employee's role?",
+                        message: "Employee's role: ",
                         choices: roleChoices
                     })
                         .then(res => {
@@ -218,7 +219,7 @@ function createEmployee() {
                                     prompt({
                                         type: "list",
                                         name: "managerId",
-                                        message: "Who's the employee's manager?",
+                                        message: "Employee's manager ",
                                         choices: managerChoices
                                     })
                                         .then(res => {
@@ -275,7 +276,7 @@ function updateEmployeeRole() {
                                 {
                                     type: "list",
                                     name: "roleId",
-                                    message: "What's the new role of this employee?",
+                                    message: "Employee's new role: ",
                                     choices: roleChoices
                                 }
                             ])
