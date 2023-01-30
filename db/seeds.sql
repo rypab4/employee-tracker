@@ -6,7 +6,8 @@ VALUES
     ('Human Resources'),
     ('Molecular Biology'),
     ('Information Technology'),
-    ('Accounting');
+    ('Accounting'),
+    ('Facilities'),
 
 INSERT INTO role
     (title, salary, department_id)
@@ -18,7 +19,8 @@ VALUES
     ('IT Director', 195000, 3),
     ('IT Tech', 100000, 3),
     ('Account Manager', 110000, 4),
-    ('Accountant', 90000, 4);
+    ('Accountant', 90000, 4),
+    ('Engineer', 1000, 5);
 
 INSERT INTO employee
     (first_name, last_name, role_id, manager_id)
