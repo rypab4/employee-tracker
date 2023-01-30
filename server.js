@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 
-const connection = require('./db/index');
+const connection = require('./db/connection.js');
 const { getDepartments, getEmployees, getRoles } = require('./db/index.js')
 
 //Inquirer prompt and questions
@@ -92,7 +92,7 @@ function addDepartment() {
   inquirer.prompt ({
       type: 'input',
       name: 'department',
-      message: 'What is the name of the new department?'
+      message: 'Department Name: ',
   }).then(function(input) {
       console.log('Inserting a new department...\n');
       const query = connection.query(
@@ -130,7 +130,7 @@ function addRole() {
           // Prompt user for salary
           type: "number",
           name: "salary",
-          message: "Enter the role salary: "
+          message: "Enter the salary: "
       },
       {   
           // Prompt user to select department role is under

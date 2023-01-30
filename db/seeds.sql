@@ -1,38 +1,39 @@
-use employees;
+USE employee_tracker
 
-INSERT INTO department
-    (name)
+INSERT INTO departments (name)
 VALUES
-    ('Human Resources'),
-    ('Molecular Biology'),
-    ('Information Technology'),
-    ('Accounting'),
-    ('Facilities'),
+('Human Resources'),
+('Information Technology'),
+('Research Department'),
+('Purchasing Department'),
+('Manufacturing Department');
 
-INSERT INTO role
-    (title, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES
-    ('HR Manager', 100000, 1),
-    ('Director', 200000, 2),
-    ('Principal Scientist', 150000, 2),
-    ('Scientific Researcher', 100000, 2),
-    ('IT Director', 195000, 3),
-    ('IT Tech', 100000, 3),
-    ('Account Manager', 110000, 4),
-    ('Accountant', 90000, 4),
-    ('Engineer', 1000, 5);
+('HR Manager', 150000, 1),
+('HR Resources', 85000, 1),
+('HR Supervisor', 100000, 1), 
+('Scientific Director', 200000, 3),
+('Scientific Researcher', 85000, 3),
+('IT Manager', 120000, 2),
+('IT Specialist', 100000, 2),
+('Psycologist', 75000, 1),
+('Buyer', 65000, 4),
+('Supervising Buyer', 85000, 4),
+('Manufacturing Director', 150000, 5),
+('Manufacturing Manager', 125000, 5),
+('Buyer', 400000, 4);
 
-INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES
-    ('Rudolf', 'Reindeer', 1, NULL),
-    ('Calvin', 'Kein', 2, 1),
-    ('Taylor', 'Swift', 3, NULL),
-    ('Brock', 'Lesnar', 4, 3),
-    ('Rocky', 'Johnson', 4, 3),
-    ('Duane', 'Johnson', 5, NULL),
-    ('Jonathan', 'Kuminga', 6, 5),
-    ('Stephen', 'Curry', 6, 5),
-    ('Thurman', 'Thomas', 7, NULL),
-    ('Joe', 'Smith', 7, 8)
-    ('Bob','DaBuilder',10,5,NULL);
+('Jack', 'Black', 1, NULL),
+('Black', 'Jack', 1, 1),
+('Aces', 'Queen', 2, 1),
+('Taylor', 'Swift', 3, 1),
+('Kate', 'Spade', 3, 1),
+('Maui', 'Jim', 4, NULL),
+('Tommy', 'Bahama', 5, 6),
+('Pat', 'Mahommes', 6, NULL),
+('Travis', 'Kelce', 7, 8),
+('James', 'LeBron', 8, 8),
+('Stephen', 'Curry', 9, NULL);
