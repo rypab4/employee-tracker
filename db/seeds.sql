@@ -32,6 +32,7 @@ VALUES
     ('Rocky', 'Johnson', 4, 3),
     ('Duane', 'Johnson', 5, NULL),
     ('Jonathan', 'Kuminga', 6, 5),
-    ('Stephan', 'Curry', 6, 5),
+    ('Stephen', 'Curry', 6, 5),
     ('Thurman', 'Thomas', 7, NULL),
-    ('Joe', 'Smith', 7, 8);
+    ('Joe', 'Smith', 7, 8)
+    ('Bob','DaBuilder',10,5,NULL);
